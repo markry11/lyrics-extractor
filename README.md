@@ -1,4 +1,4 @@
-# lyric-extractor
+# lyrics-extractor
 ## General info
 Simple package designated to retrieve lyrics of a given song
 	
