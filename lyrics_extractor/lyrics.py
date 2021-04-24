@@ -6,7 +6,7 @@ from urllib.parse import urlparse
 
 _user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36'
 _sites = [
-    "genius.com",
+    # "genius.com",
     "tekstowo.pl"
     ]
 _sites_query = ' OR '.join(map(lambda s: f'site:{s}', _sites))
@@ -72,7 +72,7 @@ class SongLyrics:
 
     scraper_factory = _ScraperFactory()
     scrapers = {
-        'genius': scraper_factory.genius_scraper,
+        # 'genius': scraper_factory.genius_scraper,
         'tekstowo': scraper_factory.tekstowo_scraper,
     }
 
