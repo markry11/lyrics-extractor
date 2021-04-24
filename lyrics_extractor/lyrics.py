@@ -79,8 +79,8 @@ class SongLyrics:
     def __handle_search_request(self, song_name: str):
         query = f'{song_name.replace("-", " ")} {_sites_query}'
         titles, links = Google(query, _user_agent)
-        if len(links) == 1 and urlparse(links[0]).path:
-            raise LyricScraperException(status_code)
+        if len(links) == 1 and not urlparse(links[0]).path:
+            raise LyricScraperException(links[0])
         return list(map(lambda t, l: {'title':t, 'link': l}, titles, links))
 
     def __extract_lyrics(self, result_url, title):
