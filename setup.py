@@ -9,5 +9,6 @@ setup(
     author_email='kryska.marek@gmail.com',
     license='MIT',
     packages=['lyrics_extractor'],
+    install_requires=["requests", "beautifulsoup4", "lxml", "scrape-search-engine"],
     zip_safe=False
 )
